@@ -1,0 +1,44 @@
+<!-- The ngFor directive loops over the list of members from the local variable -->
+<div class="container my-5">
+    <div class="container my-5">
+        <div class="container my-5 py-5">
+            <div class="row">
+
+                <div *ngFor="let room of roomList" class="card col-4 mx-3" style="width: 18rem;">
+                    <div class="card-header">
+                        <h3>{{room.roomName}}</h3>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="card-img-wrapper">
+                                <img src="{{room.roommates[0].photoUrl}}" routerLink='profiles/{{room.roommates[0].username}}' alt="user" class="card-img-top card-style-local">
+                                <img src="./assets/m.jpg"  alt="user" class="card-img-top card-style-local mx-1">
+                                <i class="fa fa-heart"></i>
+                            </div>
+                            
+                        </li>
+                        <li class="list-group-item">{{room.type}}</li>
+                    </ul>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <label>M: </label>
+                                {{room.currentMales}}/{{room.neededMales}}
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <label>F: </label>
+                                {{room.currentFemales}}/{{room.neededFemales}}
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
