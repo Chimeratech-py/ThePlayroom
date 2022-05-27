@@ -1,10 +1,34 @@
-
 <div class="container my-5">
     <div class="container my-5">
-        <div class="container my-5">
-            <h1>
-                {{member.username}}
-            </h1>
+        <div class="container my-5 py-5">
+            <div class="card">
+                <div class="row">
+                    <div class="col-4">
+                        <img src="{{member.photoUrl || './assets/user.png'}}" class="card-img-top img-thumbnail">
+                        <div class="card-body">
+                            
+                            <div>
+                                <strong>Location:</strong>
+                                <p>{{member.city}}, {{member.country}}</p>
+                            </div>
+                            <div>
+                                <strong>Age:</strong>
+                                <p>{{member.age}}</p>
+                            </div>
+                            
+        
+                        </div>
+                    </div>
+                    <div class="col-8 my-4" id="shaded-div">
+                        <h3>{{member.username}}</h3>
+                        <p>{{member.introduction}}</p>
+                    </div>
+                </div>
+                
+                <div class="card-footer">
+                    
+                </div>
+            </div>
         </div>
     </div>
 </div>

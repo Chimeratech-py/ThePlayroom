@@ -49,7 +49,7 @@ export const ROOMS: Room[] = [
                 age: 26,
                 lastActive: new Date("2022-03-26"),
                 gender: 'Male',
-                introduction: 'Any goal is a hole',
+                introduction: 'Any hole is a goal',
                 city: 'Davao City',
                 country: 'Philippines',
                 photos: [{id: 1, url: './assets/Chito.jpg', isMain: true}]
