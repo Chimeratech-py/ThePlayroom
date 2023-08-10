@@ -6,14 +6,14 @@ import { ACCOUNTS } from '../_data/mock-account';
   providedIn: 'root'
 })
 export class AccountService {
-
+  accountsAvailable: Account[] = ACCOUNTS;
   constructor() { }
 
   login(inputAccount: Account){
-    for(var a of ACCOUNTS){
-      if(a.username === inputAccount.username){
-        
+    this.accountsAvailable.forEach( (item) => {
+      if(item.username === inputAccount.username && item.password === inputAccount.password){
+       
       }
-    }
+    })
   }
 }
